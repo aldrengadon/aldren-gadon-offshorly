@@ -5,13 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Titles;
 use App\Models\Todos;
+use Illuminate\Support\Facades\Auth;
 
 class ToDosController extends Controller{
     
     public function index(Request $request){
 
+        $auth = Auth::user();
+        $userId = $auth->id;
         $toDoList = [];
-        $titles = Titles::all();
+        $titles = Titles::findByUserId($userId);
         foreach($titles as $t){  
             $list = [];      
             foreach($t->toDoList as $tl){

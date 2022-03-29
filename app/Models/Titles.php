@@ -27,4 +27,8 @@ class Titles extends Model
             'id' //local key
         );
     }
+
+    public static function findByUserId($userId){
+        return Titles::where('created_by', $userId)->get();
+    }
 }
