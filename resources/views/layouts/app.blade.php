@@ -1,16 +1,10 @@
 <html lang="en">
 	<head>
-        <title> Vanguard Screening Solutions Inc., Login </title>
+        <title> To do list: </title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('vendor/images/icons/apple-touch-icon-144-precomposed.png') }}">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('vendor/images/icons/apple-touch-icon-114-precomposed.png') }}">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('vendor/images/icons/apple-touch-icon-72-precomposed.png') }}">
-		<link rel="apple-touch-icon-precomposed" href="{{ asset('vendor/images/icons/apple-touch-icon-57-precomposed.png') }}">
-    	<link rel="shortcut icon" href="{{ asset('vendor/images/vanguard-icon-white.png') }}">
 
 		<script src="{{ asset('js/app.js') }}" defer></script>
         <style src="vue-notifyjs/themes/default.css"></style>
