@@ -32,6 +32,7 @@ Vue.component('to-dos-component', require('./components/to-dos.vue').default);
 
 Vue.component('notification-fail', require('./components/notification/notificationFail.vue').default);
 Vue.component('notification-success', require('./components/notification/notificationSuccess.vue').default);
+Vue.component('notification-notice', require('./components/notification/notificationNotice.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

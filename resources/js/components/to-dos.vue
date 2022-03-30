@@ -39,7 +39,11 @@
                         </div>
                     </h2>
                     <div class="content-box-wrapper">
-                        <table class="table table-hover table-condensed" cellspacing="0" style="margin-top:10px;">
+                        <notification-notice v-if="!getTodo"
+                            title="NOTICE!"
+                            message="You have No Todo list.">
+                        </notification-notice>
+                        <table class="table table-hover table-condensed" cellspacing="0" style="margin-top:10px;" v-else>
                             <thead style="background-color: #f9fafe; color: #4b5056;">
                                 <tr style="height: 30px;">
                                     <th style="font-weight: bold;">Title</th>
@@ -47,7 +51,7 @@
                                     <th style="font-weight: bold;">Number of Items to do</th>
                                     <th style="font-weight: bold;">Date Created</th>
                                     <th style="font-weight: bold;">Date Updated</th>
-                                    <th style="text-align: center;">Action</th>
+                                    <th style="text-align: center;">View</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -182,7 +186,13 @@ export default {
     computed: {
         todosIndex(){
             return this.todos.length;
+        },
+        getTodo(){
+            return Object.keys(this.toDoList).length;
         }
+    },
+    created(){
+
     },
     methods: {
         reload(){
