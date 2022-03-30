@@ -43,12 +43,16 @@ class ToDosController extends Controller{
     public function registerToDos(Request $request){
         $params = $request->all();
 
+        $auth = Auth::user();
+        $userId = $auth->id;
+
         if(isset($params['id']))
             $toDo = Titles::findOrNew($params['id']);
         else
             $toDo = new Titles();
 
         $toDo->name = $params['title'];
+        $toDo->created_by = $userId;
         $toDo->save();
 
         
